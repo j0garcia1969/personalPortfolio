@@ -25,7 +25,7 @@ SECRET_KEY = 'ld9%tnf9jw@9^ivrn_+g=exv1t2*441xf!_l%sgu)!yvt_%vs-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['johnpaulgarcia.pythonanywhere.com',]
 
 
 # Application definition
@@ -76,12 +76,13 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
-        'USER':'postgres',
-        'PASSWORD': 'RunSatLog76!',
-        'HOST':'localhost',
-        'PORT':'5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",},
+        'NAME': 'johnpaulgarcia$portfoliodb',
+        'USER':'johnpaulgarcia',
+        'PASSWORD': 'vNcAdx7UN6TuaJs',
+        'HOST':'johnpaulgarcia.mysql.pythonanywhere-services.com',
+        'PORT':'3306',
     }
 }
 
